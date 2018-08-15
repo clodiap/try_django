@@ -23,10 +23,11 @@ urlpatterns = [
     path('contact/', contact_view, name='contact'),
     path('about/', about_view, name='about'),
     path('social/', social_view, name='social'),
-    path('product/', product_detail_view, name='product'),
-    path('products/<int:id>/', dynamic_lookup_view, name='products'),
+    # path('product/', product_detail_view, name='product_detail'),
+    path('products/', product_list_view, name='product_list'),
+    path('products/<int:id>/', dynamic_lookup_view, name='product_detail'),
     path('create/', product_create_view, name='product_create'),
     path('products/<int:id>/delete/', product_delete_view, name='product_delete'),
-    path('products/', product_list_view, name='product_list'),
+
     path('admin/', admin.site.urls),
 ]
